@@ -185,7 +185,12 @@ public class MainController implements Initializable {
             String fileName = bundle.getString("app.name") + " N" + String.format("%02d", size) + ".csv";
             fileChooser.setInitialFileName(fileName);
             fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("CSV-Files", "*.csv"));
-            fileChooser.setInitialDirectory(new File(Globals.propman.getProperty(Globals.CSV_DIR, System.getProperty("user.dir") + "/csv/")));
+            String csvDirString = System.getProperty("user.dir") + "/csv/";
+            File csvDir = new File(csvDirString);
+            if (!csvDir.exists()) {
+                csvDir.mkdir();
+            }
+            fileChooser.setInitialDirectory(new File(Globals.propman.getProperty(Globals.CSV_DIR, csvDirString)));
             File file = fileChooser.showSaveDialog(stage);
             if (file != null) {
                 try {
@@ -274,7 +279,7 @@ public class MainController implements Initializable {
         } catch (Exception ex) {
             _log.error(ex.getMessage());
         }
-        
+
         alert.setTitle(bundle.getString("dlg.about.info"));
         alert.setHeaderText(bundle.getString("dlg.about.header"));
         String programmer = bundle.getString("dlg.about.content");
