@@ -1,5 +1,7 @@
 # TOWERS OF HANOI (TÜRME VON HANOI) 1.0.0
 
+![image](https://github.com/NeuralCortex/Towers_Of_Hanoi/blob/main/images/towers.png)
+
 ## Funktionsweise des Programms
 
 Türme von Hanoi ist ein mathematisches Guduldsspiel das auf dem Teile- und Herrsche-Verfahren beruht.<br>
