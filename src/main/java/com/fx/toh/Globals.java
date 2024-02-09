@@ -1,5 +1,7 @@
 package com.fx.toh;
 
+import java.util.Locale;
+
 public class Globals {
 
     //Für Funktionen
@@ -20,6 +22,8 @@ public class Globals {
 
     //Show Test-UI (Managed UI Ein / Aus)
     public static boolean SHOW_TEST_UI = false;
+
+    public static final Locale DEFAULT_LOCALE = Locale.US;
 
     //Fenstergröße global gesteuert in 16:9
     public static final double HEIGHT = 900;//900.0f;
