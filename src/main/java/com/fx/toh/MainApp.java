@@ -9,7 +9,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.util.Locale;
 import java.util.ResourceBundle;
 import static javafx.application.Application.launch;
 import javafx.application.Platform;
@@ -53,7 +52,7 @@ public class MainApp extends Application {
         stage.setOnCloseRequest(e -> {
             Platform.exit();
         });
-        
+
         _log.info("Start successfull ...");
     }
 

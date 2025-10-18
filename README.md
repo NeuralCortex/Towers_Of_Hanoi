@@ -1,49 +1,33 @@
-# TOWERS OF HANOI (TÜRME VON HANOI) 1.0.0
+# Towers of Hanoi 1.0.0
 
-![image](https://github.com/NeuralCortex/Towers_Of_Hanoi/blob/main/images/towers.png)
+![Towers of Hanoi](https://github.com/NeuralCortex/Towers_Of_Hanoi/blob/main/images/towers.png)
 
-## Funktionsweise des Programms
+## Overview
 
-Türme von Hanoi ist ein mathematisches Guduldsspiel das auf dem Teile- und Herrsche-Verfahren beruht.<br>
-Das Spiel besteht aus 3 Stapel, mit nach der Größe geordneten unterschiedlich großen Scheiben.<br>
-Ziel des Spiel ist es die Scheiben auf Stapel 1, auf Stapel 3 (also den rechten Stapel) umzuordnen.<br>
-Dabei dürfen nur die vorhandenen Stapel benutzt werden und es darf keine größere Scheibe auf einer kleineren liegen.
+Towers of Hanoi is a mathematical puzzle game based on a divide-and-conquer approach. The game consists of three stacks with discs of varying sizes arranged in ascending order. The objective is to move all discs from the first stack to the third stack (rightmost), using only the available stacks and ensuring no larger disc is placed on top of a smaller one.
 
-Das Programm verwendet einen rekursiven Algorithmus zur Lösung des Problems.<br>
-Auf der Rechten Seite des Programms befindet sich eine Tabelle mit allen nötigen Schritten zur Lösung.<br>
-Diese Lösung kann in eine CSV-Datei exportiert werden.
+This JavaFX application provides a graphical interface to play and solve the puzzle, supporting up to 10 discs (requiring 1023 steps to solve). The program uses a recursive algorithm to compute the solution, which is displayed in a table within the interface. Users can export the solution to a CSV file for further analysis.
 
-Es werden maximal 10 Scheiben unterstützt (1024 Schritte zur Lösung).
+## Features
 
-## How the program works
+- Interactive JavaFX interface to visualize the Towers of Hanoi puzzle.
+- Recursive algorithm to generate the optimal solution.
+- Table displaying all required steps to solve the puzzle.
+- Option to export the solution to a CSV file.
+- Supports up to 10 discs.
 
-Towers of Hanoi is a divide and conquer mathematical puzzle game.<br>
-The game consists of 3 stacks, with discs of different sizes ordered by size.<br>
-The aim of the game is to rearrange the discs from stack 1 to stack 3 (i.e. the stack on the right).<br>
-Only the existing stacks may be used and no larger disc may lie on top of a smaller one.
+## Technologies Used
 
-The program uses a recursive algorithm to solve the problem.<br>
-On the right side of the program there is a table with all the necessary steps to solve the problem.<br>
-This solution can be exported to a CSV file.
+This project was developed using the following tools and frameworks:
 
-A maximum of 10 discs are supported (1024 steps to solve).
+- **Apache NetBeans 27 IDE**: [NetBeans 27](https://netbeans.apache.org/)
+- **Java SDK**: [JDK 24](https://www.oracle.com/java/technologies/javase/)
+- **SceneBuilder**: [Gluon SceneBuilder](https://gluonhq.com/products/scene-builder/) for GUI development
+- **JavaFX SDK**: [JavaFX](https://gluonhq.com/products/javafx/)
 
-## Verwendete Technologie
+## Usage
 
-Dieses JavaFX-Projekt wurde erstellt mit der Apache NetBeans 17 IDE [NetBeans 17](https://netbeans.apache.org/).
-
-Folgende Frameworks sollten installiert sein:
-
-- JAVA-SDK [JAVA 19](https://www.oracle.com/java/technologies/javase/jdk19-archive-downloads.html)
-- SceneBuilder für GUI-Entwicklung [Gluon SceneBuilder](https://gluonhq.com/products/scene-builder/)
-- JAVA-FX-SDK [JavaFX](https://gluonhq.com/products/javafx/)
-
-## Technology used
-
-This JavaFX project was built with the Apache NetBeans 17 IDE [NetBeans 17](https://netbeans.apache.org/).
-
-The following frameworks should be installed:
-
-- JAVA SDK [JAVA 19](https://www.oracle.com/java/technologies/javase/jdk19-archive-downloads.html)
-- SceneBuilder for GUI development [Gluon SceneBuilder](https://gluonhq.com/products/scene-builder/)
-- JAVA FX SDK [JavaFX](https://gluonhq.com/products/javafx/)
+1. Start the application to view the Towers of Hanoi interface.
+2. Select the number of discs (up to 10).
+3. The program will display the steps to solve the puzzle in a table on the right.
+4. Use the export feature to save the solution as a CSV file.
