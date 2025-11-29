@@ -51,7 +51,7 @@ public class Globals {
     public static final String APP_LOGO_PATH = System.getProperty("user.dir") + "/images/kdf.png";
     public static final String SIDE_IMAGE_PATH = System.getProperty("user.dir") + "/images/side.png";
     public static final String CENTER_IMAGE = System.getProperty("user.dir") + "/images/lago.jpg";
-    public static final String CSS_PATH = "/com/fx/toh/style/hec.css";
+    public static final String CSS_PATH = "/com/fx/toh/style/nc.css";
     public static final String MOON_IMAGE_PATH = System.getProperty("user.dir") + "/images/mond_small.png";
 
     //FXML

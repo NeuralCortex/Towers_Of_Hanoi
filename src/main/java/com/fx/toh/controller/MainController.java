@@ -115,7 +115,7 @@ public class MainController implements Initializable {
         AnchorPane.setRightAnchor(tohAnchorPane, 0.0);
         AnchorPane.setLeftAnchor(tohAnchorPane, 0.0);
 
-        anchorPane.setId("hec-background-blue");
+        anchorPane.setId("blue");
         anchorPane.getChildren().add(tohAnchorPane);
 
         miClose.setOnAction(e -> {
@@ -274,6 +274,7 @@ public class MainController implements Initializable {
         HelperFunctions.centerWindow(alert.getDialogPane().getScene().getWindow());
 
         Stage stageDlg = (Stage) alert.getDialogPane().getScene().getWindow();
+        alert.getDialogPane().getStylesheets().add(Globals.CSS_PATH);
         try {
             stageDlg.getIcons().add(new Image(new FileInputStream(new File(Globals.APP_LOGO_PATH))));
         } catch (Exception ex) {
@@ -283,17 +284,14 @@ public class MainController implements Initializable {
         alert.setTitle(bundle.getString("dlg.about.info"));
         alert.setHeaderText(bundle.getString("dlg.about.header"));
         String programmer = bundle.getString("dlg.about.content");
-        alert.setContentText(MessageFormat.format(programmer, String.format("%d", LocalDate.now().getYear())));
+        alert.setContentText(MessageFormat.format(programmer, LocalDate.now().getYear()));
 
         alert.showAndWait();
     }
 
     private void init(ResourceBundle bundle) {
-        hboxStatus.setId("hec-background-blue");
-        hBoxTop.setId("hec-background-blue");
-        lbStatus.setId("hec-text-white");
-        lbInfo.setId("hec-text-white");
-        lbSteps.setId("hec-text-white");
+        hboxStatus.setId("blue");
+        hBoxTop.setId("blue");
 
         menuFile.setText(bundle.getString("menu.file"));
         menuHelp.setText(bundle.getString("menu.help"));
@@ -307,7 +305,7 @@ public class MainController implements Initializable {
         lbSteps.setText("");
 
         String programmer = bundle.getString("dlg.about.content");
-        lbInfo.setText(MessageFormat.format(programmer, String.format("%d", LocalDate.now().getYear())));
+        lbInfo.setText(MessageFormat.format(programmer, LocalDate.now().getYear()));
 
         cbSize.getItems().clear();
         for (int i = 3; i < 11; i++) {
